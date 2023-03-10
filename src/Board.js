@@ -61,7 +61,7 @@ class Board extends React.Component {
                 check = true;
         }
         if(check === true)
-            this.restart();
+            compelete = true;
     }
 
     render() {
