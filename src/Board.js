@@ -55,10 +55,13 @@ class Board extends React.Component {
             return true;
         }
         
+        check = false;
         for(i=0; i<9; i++) {
             if(Board.array[i] === 'X' || Board.array[i] === 'O')
-                this.restart();
+                check = true;
         }
+        if(check === true)
+            this.restart();
     }
 
     render() {
