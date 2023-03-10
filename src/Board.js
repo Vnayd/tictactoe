@@ -54,6 +54,11 @@ class Board extends React.Component {
         } else if(Board.array[2] === this.attempt && Board.array[4] === this.attempt && Board.array[6] === this.attempt) {
             return true;
         }
+        
+        for(i=0; i<9; i++) {
+            if(Board.array[i] === 'X' || Board.array[i] === 'O')
+                this.restart();
+        }
     }
 
     render() {
